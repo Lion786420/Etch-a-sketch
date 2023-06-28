@@ -7,6 +7,10 @@ btn.addEventListener('click',()=>{
         if(grids>100 || grids<1){
             alert("Plz enter a number from 1-100");
         }else{
+            const gridd=document.querySelectorAll('.grid');
+            gridd.forEach((grid)=>{
+                container.removeChild(grid);
+            });
             boxes(grids);
             break;
         }
@@ -24,7 +28,6 @@ const boxes=(grids)=>{
         container.appendChild(div);
     }
     const gridd=document.querySelectorAll('.grid');
-    console.log(gridd);
     gridd.forEach((grid)=>{
         grid.addEventListener('mouseover',(e)=>{
             const hexArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F'];
